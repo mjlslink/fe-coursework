@@ -4,7 +4,10 @@ Template files end with '.ejs'.
 
 All templates are stored in a view directory.
 
-<%= %>          display a variable declared in the index.js
+<%= %>          tag which indicates output declared in the index.js
 <% %>           logic used in the ejs document
 <%% %%>         comments 
-<%-  %>         used to include other template files
+<%-  %>         used to include other template files or HTML that should be rendered
+
+EJS doesn't follow the same scoping rules as Javascript. In order to check whether a variable used in EJS exists, you need to use the 'locals' object to prefix a passed variable. 
+
